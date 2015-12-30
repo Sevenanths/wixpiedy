@@ -1,0 +1,71 @@
+New functions:
+
+- Controls.enableGyro() - Enables Gyroscope.
+- Controls.disableGyro() - Disables Gyroscope.
+- Controls.enableAccel() - Enables Accelerometer.
+- Controls.disableAccel() - Disables Accelerometer.
+- Controls.readGyro() - Reads Gyroscope state.
+- Controls.readAccel() - Reads Accelerometer state.
+- Controls.enableScreen() - Power on a screen.
+- Controls.disableScreen() - Power off a screen.
+- Controls.shellStatus() - Gets shell status.
+- Graphics.getPixel() - Gets a pixel for a GPU texture.
+- System.setCpuSpeed() - Sets CPU frequency.
+- System.getCpuSpeed() - Gets CPU frequency.
+- Camera.init() - Inits console camera.
+- Camera.getOutput() - Blends on screen camera output.
+- Camera.takePhoto() - Takes a photo with the camera.
+- Camera.takeImage() - Takes an image with the camera.
+- Camera.term() - Terminates camera.
+- Mic.start() - Starts recording with microphone.
+- Mic.isRecording() - Checks if microphone is still recording.
+- Mic.stop() - Stops recording and save the result. 
+- Mic.pause() - Pauses record.
+- Mic.resume() - Resumes record.
+- JPGV.drawFast() - Draws a JPGV video in fast mode (only fullscreen videos).
+- Sound.getService() - Gets used service for audio system.
+
+New features and improvements:
+
+- Now sockets are set in non-blocking mode by default.
+- Now Screen functions can be used to edit GPU textures (like before for normal Images).
+- Now System.checkBuild() will return different codes for NH1 and NH2.
+- Updated Lua build from 5.3.0 to 5.3.1.
+- Speedup for I/O functions.
+- Now if index.lua file is not found, interpreter will give an error instead of a system crash.
+- Introduced Audio-Device system to manage Audio on the system.
+- Now if csnd:SND is not available, dsp::DSP will be used for a basic audio support.
+- Now a faster version (unsafe) of the interpreter will be provided in official builds without error handler.
+- Now third argument for System.takeScreenshot() and Screen.saveImage() is facoltative (Default = false).
+- Added possibility to change interpolation mode for sounds (Default = LINEAR_INTERP).
+
+Deprecated functions:
+
+- BMPV module deprecated ( Useless video format ).
+- Sound.register() deprecated ( Use Mic module ).
+
+Syntax changes:
+
+- Now System.getKernel() and System.getFirmware() will return MAJOR_VERSION, MINOR_VERSION and REVISION.
+- Now Sound.play() will not take channels arguments anymore and will take as third (facoltative) argument an interpolation mode.
+- Now JPGV.start() will not take channels arguments anymore.
+
+Bugfixes:
+
+- System.extractZIP() now closes ZIP files correctly, allowing to delete them for example.
+- Now an interpreter crash during Sockets usage will not corrupt Networking features.
+- Now System.getKernel() and System.getFirmware are not swapped anymore.
+- Now Kernel privilege escalation for 4.5-9.2 users is done also on Ninjhax 2.x.
+- Now Graphics.fillCircle() accepts correct arguments number.
+- Now Screen.drawPartialImage() blends correctly on RIGHT_EYE.
+- Now exiting from interpreter will not crash the system anymore on NH2.5.
+- Now Sound module functions work correctly on NH2.5.
+- Now System.getDate() will not cause freezes if console clock was never set.
+- Now System.addNotification() works also on NH2.
+- Now enabling 3D with 3D slider off will not cause system crashes anymore.
+
+Samples:
+
+- Replaced BMPV sample with a JPGV sample.
+- Added Camera sample for camera usage.
+- Updated Mic sample with new Mic module.

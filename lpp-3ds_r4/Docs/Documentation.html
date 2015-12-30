@@ -1,0 +1,966 @@
+<title>lpp-3ds temp documentation</title>
+<center><b><font color=red>lpp-3ds temp documentation</font></b>
+<br>Note: This is a temporary documentation for lpp-3ds. In future, we will make a Doxygen-style documentation. Use the Search function (CTRL + F) to find function/module you want to see.<br><br>
+
+<table border=1>
+<tr bgcolor="#FFFF99"><td><center><font size=4><b>Standard LUA Library</b></font></center></td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>math Library</b></font> - Arithmetical functions.<br><br>
+<b>Official documentation:</b> <a href="http://www.lua.org/manual/5.3/manual.html#6.7">Read Now</a>
+</td></tr>
+</table>
+
+<br><br><table border=1>
+<tr bgcolor="#FFFF99"><td><center><font size=4><b>Environment Variables</b></font></center></td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>TOP_SCREEN</b></font> - Top Screen Image_ID for Screen functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>BOTTOM_SCREEN</b></font> - Bottom Screen Image_ID for Screen functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>LEFT_EYE</b></font> - ID to print for left eye in stereoscopic 3D.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>RIGHT_EYE</b></font> - ID to print for right eye in stereoscopic 3D.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>KEY_A</b></font> - Key A value in u32 format for Controls functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>KEY_B</b></font> - Key B value in u32 format for Controls functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>KEY_R</b></font> - Key R value in u32 format for Controls functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>KEY_L</b></font> - Key L value in u32 format for Controls functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>KEY_START</b></font> - Key START value in u32 format for Controls functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>KEY_SELECT</b></font> - Key SELECT value in u32 format for Controls functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>KEY_X</b></font> - Key X value in u32 format for Controls functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>KEY_Y</b></font> - Key X value in u32 format for Controls functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>KEY_ZL</b></font> - Key ZL value in u32 format for Controls functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>KEY_ZR</b></font> - Key ZR value in u32 format for Controls functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>KEY_DRIGHT</b></font> - Key Digital Right value in u32 format for Controls functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>KEY_DLEFT</b></font> - Key Digital Left value in u32 format for Controls functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>KEY_DUP</b></font> - Key Digital Up value in u32 format for Controls functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>KEY_DDOWN</b></font> - Key Digital Down value in u32 format for Controls functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>KEY_TOUCH</b></font> - Key Touchscreen value in u32 format for Controls functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>KEY_HOME</b></font> - Key Home value in u32 format for Controls functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>KEY_POWER</b></font> - Key Power value in u32 format for Controls functions.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>FREAD</b></font> - Attribute for I/O functions for opening a file with Read attribute.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>FWRITE</b></font> - Attribute for I/O functions for opening a file with Write attribute.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>FCREATE</b></font> - Attribute for I/O functions for opening a file with Create/Write attributes.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>LOOP</b></font> - Attribute for Audio/Video functions for looping buffer.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>NO_LOOP</b></font> - Attribute for Audio/Video functions for no looping buffer.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>NAND</b></font> - Attribute for CIA NAND managing.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>SDMC</b></font> - Attribute for CIA SDMC managing.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>APP_RUNNING</b></font> - Status for homebrew while is not suspended/exiting.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>APP_EXITING</b></font> - Status for homebrew while is exiting.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>NO_INTERP</b></font> - No interpolation mode for sounds.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>LINEAR_INTERP</b></font> - Linear interpolation mode for sounds.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>POLYPHASE_INTERP</b></font> - Polyphase interpolation mode for sounds.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>INNER_CAM</b></font> - Inner camera ID.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>OUTER_CAM</b></font> - Outer camera ID.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>VGA_RES</b></font> - VGA (640x480) resolution value.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>QVGA_RES</b></font> - QVGA (320x240) resolution value.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>QQVGA_RES</b></font> - QVGA (160x120) resolution value.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>CIF_RES</b></font> - CIF (352x288) resolution value.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>QCIF_RES</b></font> - QCIF (176x144) resolution value.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>DS_RES</b></font> - NDS LCD (256x192) resolution value.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>HDS_RES</b></font> - Hi-Res NDS LCD (512x384) resolution value.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>CTR_RES</b></font> - 3DS LCD (400x240) resolution value.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>NEW_3DS_CLOCK</b></font> - 804 MHZ global variable.
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>OLD_3DS_CLOCK</b></font> - 268 MHZ global variable.
+</td></tr>
+</table>
+<br><br>
+
+<table border=1>
+<tr bgcolor="#FFFF99"><td><center><font size=4><b>I/O Module</b></font></center></td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>s64 io.open(string file,int attribute,[u64 extdata_archive])</b></font> - Open a file.<br><br>
+<b>Sample usage:</b> fileStream = io.open("/file.txt",FCREATE)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>string io.read(s64 filestream,u64 offset,u64 size)</b></font> - Read from an opened file.<br><br>
+<b>Sample usage:</b> text = io.read(fileStream,0,10)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void io.write(s64 filestream,u64 offset,string text,u64 size)</b></font> - Write a text in an opened file.<br><br>
+<b>Sample usage:</b> io.write(fileStream,0,"Text written with LPP", 21)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u64 io.size(s64 filestream)</b></font> - Get size of an opened file.<br><br>
+<b>Sample usage:</b> size = io.size(fileStream)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void io.close(s64 filestream, [bool extdata_file])</b></font> - Close an opened file.<br><br>
+<b>Sample usage:</b> io.close(fileStream)
+</td></tr>
+</table>
+<br><br>
+
+<table border=1>
+<tr bgcolor="#FFFF99"><td><center><font size=4><b>System Module</b></font></center></td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.exit(void)</b></font> - Exit homebrew and returns to Homebrew Menu.<br><br>
+<b>Sample usage:</b> System.exit()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u8,u8,u8 System.getFirmware(void)</b></font> - Returns firmware version.<br><br>
+<b>Sample usage:</b> major,minor,revision = System.getFirmware()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u8,u8,u8 System.getKernel(void)</b></font> - Returns kernel version.<br><br>
+<b>Sample usage:</b> major,minor,revision = System.getKernel()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int System.getRegion(void)</b></font> - Get console region (1 = USA, 2 = EUR, Other = JPN).<br><br>
+<b>Sample usage:</b> reg = System.getRegion()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>string System.getUsername(void)</b></font> - Returns console user username.<br><br>
+<b>Sample usage:</b> user = System.getUsername()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u8, u8 System.getBirthday(void)</b></font> - Returns console user birthday.<br><br>
+<b>Sample usage:</b> day, month = System.getBirthday()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.takeScreenshot(string filename,[bool jpg_compression])</b></font> - Take a screenshot in BMP/JPG format.<br><br>
+<b>Sample usage:</b> System.takeScreenshot("/file.bmp",false)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int System.checkBuild(void)</b></font> - Check current working lpp-3ds build type.<br><br>
+<b>Sample usage:</b> build = System.checkBuild() [0 = NH1, 1 = 3DS/CIA, 2 = NH2]
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>[string] System.currentDirectory([string path])</b></font> - Get or set current directory.<br><br>
+<b>Sample usage:</b> dir = System.currentDirectory() / System.currentDirectory("/lpp-3ds/")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.deleteFile(string path)</b></font> - Delete a file.<br><br>
+<b>Sample usage:</b> System.deleteFile("/file.txt")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.deleteDirectory(string path)</b></font> - Delete a directory.<br><br>
+<b>Sample usage:</b> System.deleteDirectory("/dir")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.renameDirectory(string path,string path2)</b></font> - Move or rename a directory.<br><br>
+<b>Sample usage:</b> System.renameDirectory("/path","/path2")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.renameFile(string path,string path2)</b></font> - Move or rename a file.<br><br>
+<b>Sample usage:</b> System.renameFile("/file.txt","/file.sh")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.createDirectory(string path)</b></font> - Create a directory.<br><br>
+<b>Sample usage:</b> System.createDirectory("/test_dir")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>bool System.doesFileExist(string path)</b></font> - Check if a file exists.<br><br>
+<b>Sample usage:</b> if System.doesFileExist("/file.txt") then ... end
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>table System.listDirectory(string path)</b></font> - List a directory.<br><br>
+<b>Sample usage:</b> list_dir = System.listDirectory("/test_dir/")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>bool System.isBatteryCharging(void)</b></font> - Check if battery is in charging.<br><br>
+<b>Sample usage:</b> if (System.isBatteryCharging()) then ... end
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int System.getBatteryLife(void)</b></font> - Get battery life.<br><br>
+<b>Sample usage:</b> life_battery = System.getBatteryLife()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int System.getModel(void)</b></font> - Get 3DS Model. [Return values: <a href=http://3dbrew.org/wiki/Cfg:GetSystemModel>See here</a>]<br><br>
+<b>Sample usage:</b> model = System.getModel()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int System.getLanguage(void)</b></font> - Get 3DS system language.<br><br>
+<b>Sample usage:</b> language = System.getLanguage()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>string System.startKeyboard([string text])</b></font> - Start a virtual built-in keyboard.<br><br>
+<b>Sample usage:</b> my_name = System.startKeyboard("Paul")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.launch3DSX(string filename)</b></font> - Launch a 3DSX homebrew.<br><br>
+<b>Sample usage:</b> System.launch3DSX("/boot.3dsx")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.launchCIA(u32 unique_id,u32 mediatype)</b></font> - Launch an imported CIA.<br><br>
+<b>Sample usage:</b> System.launchCIA(0x00133700,SDMC)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>table System.extractSMDH(string filename)</b></font> - Extract title, desc, author and icon from a SMDH file.<br><br>
+<b>Sample usage:</b> smdh = System.extractSMDH("/file.smdh") [smdh.title, smdh.desc, smdh.author, smdh.icon]
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>table System.listExtdataDir(string path,u64 archive)</b></font> - List a folder in extdata.<br><br>
+<b>Sample usage:</b> banner = System.listExtdataDir("/ExBanner",0x227)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>table System.scanExtdata(void)</b></font> - List all extdata folders and files.<br><br>
+<b>Sample usage:</b> extdata_dir = System.scanExtdata()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>table System.listCIA(void)</b></font> - List all imported CIA files.<br><br>
+<b>Sample usage:</b> cia_table = System.listCIA()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.installCIA(string filename)</b></font> - Install a CIA file.<br><br>
+<b>Sample usage:</b> System.installCIA("/file.cia")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.uninstallCIA(u32 delete_id,u32 mediatype)</b></font> - Uninstall a CIA file.<br><br>
+<b>Sample usage:</b> System.uninstallCIA(1,SDMC)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.extractZIP(string file,string path_to_extract,[string password])</b></font> - Extract a ZIP file.<br><br>
+<b>Sample usage:</b> System.extractZIP("/file.zip","/file")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.extractCIA(string file)</b></font> - Extract ProductCode and UniqueID from a CIA file.<br><br>
+<b>Sample usage:</b> cia_info = System.extractCIA("/file.cia") [cia_info.unique_id , cia_info.title]
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u8 System.checkStatus(void)</b></font> - Check homebrew status (Like APP_EXITING).<br><br>
+<b>Sample usage:</b> status = System.checkStatus()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.showHomeMenu(void)</b></font> - Sets up necessary syscall for Home/Power buttons support.<br><br>
+<b>Sample usage:</b> System.showHomeMenu()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.reboot(void)</b></font> - Reboot Nintendo 3DS.<br><br>
+<b>Sample usage:</b> System.reboot()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.launchGamecard(void)</b></font> - Launch inserted game cartridge.<br><br>
+<b>Sample usage:</b> System.launchGamecard()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u64 System.getFreeSpace(void)</b></font> - Get SD card free space.<br><br>
+<b>Sample usage:</b> free_space = System.getFreeSpace(void)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int,int,int System.getTime(void)</b></font> - Get console time.<br><br>
+<b>Sample usage:</b> h,m,s = System.getTime()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int,int,int,int System.getDate(void)</b></font> - Get console date.<br><br>
+<b>Sample usage:</b> day_value,day,month,year = System.getDate() [day_value: 5 = Friday, 6 = Saturday...]
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>string System.getGWRomID(void)</b></font> - Get Product ID for current loaded rom on a Gateway/Mt Card.<br><br>
+<b>Sample usage:</b> product_id = System.getGWRomID()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.addNotification(string title, string text)</b></font> - Add a news to official Nintendo News applet.<br><br>
+<b>Sample usage:</b> System.addNotification("Congrats!","You installed lpp-3ds successfully!")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void System.setCpuSpeed(int value)</b></font> - Sets CPU frequency.<br><br>
+<b>Sample usage:</b> System.setCpuSpeed(NEW_3DS_CLOCK)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int System.getCpuSpeed()</b></font> - Gets CPU frequency.<br><br>
+<b>Sample usage:</b> freq = System.getCpuSpeed()
+</td></tr>
+</table>
+
+<br><br>
+<table border=1>
+<tr bgcolor="#FFFF99"><td><center><font size=4><b>Screen Module</b></font></center></td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Screen.waitVblankStart(void)</b></font> - Wait Screen Refresh.<br><br>
+<b>Sample usage:</b> Screen.waitVblankStart()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Screen.flip(void)</b></font> - Flip screen (Needed for every Screen function).<br><br>
+<b>Sample usage:</b> Screen.flip()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Screen.debugPrint(int x, int y, string text, u32 color, Image_id screen_id, [Eye_id] eye)</b></font> - Write a string on screen or image.<br><br>
+<b>Sample usage:</b> Screen.debugPrint(0, 0, "Hello World", Color.new(255,255,255), TOP_SCREEN)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Screen.refresh(void)</b></font> - Refresh screen buffers.<br><br>
+<b>Sample usage:</b> Screen.refresh()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Screen.clear(Image_id screen_id)</b></font> - Clear screen.<br><br>
+<b>Sample usage:</b> Screen.clear(TOP_SCREEN)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Screen.fillRect(int x1, int x2, int y1, int y2, u32 color, Image_id screen_id, [Eye_id] eye)</b></font> - Draw a rectangle.<br><br>
+<b>Sample usage:</b> Screen.fillRect(5, 20, 5, 40, Color.new(255,0,0), BOTTOM_SCREEN)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Screen.fillEmptyRect(int x1, int x2, int y1, int y2, u32 color, Image_id screen_id, [Eye_id] eye)</b></font> - Draw a rectangular box.<br><br>
+<b>Sample usage:</b> Screen.fillEmptyRect(5, 20, 5, 40, Color.new(255,0,0), BOTTOM_SCREEN)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Screen.drawLine(int x1, int x2, int y1, int y2, u32 color, Image_id screen_id, [Eye_id] eye)</b></font> - Draw a line.<br><br>
+<b>Sample usage:</b> Screen.drawLine(5, 20, 5, 40, Color.new(255,0,0), BOTTOM_SCREEN)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Screen.drawPixel(int x, int y, u32 color, Image_id screen_id, [Eye_id] eye)</b></font> - Draw a pixel.<br><br>
+<b>Sample usage:</b> Screen.drawPixel(5, 5, Color.new(255,0,0), BOTTOM_SCREEN)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u32 Screen.getPixel(int x, int y, Image_id screen_id, [Eye_id] eye)</b></font> - Get the color of a pixel.<br><br>
+<b>Sample usage:</b> Screen.getPixel(5, 5, BOTTOM_SCREEN)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>Image_id Screen.loadImage(string filename)</b></font> - Load a BMP, PNG or JPG image file.<br><br>
+<b>Sample usage:</b> bitmap = Screen.loadImage("/file.bmp")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Screen.drawImage(int x,int y,Image_id image,Image_id screen_id, [Eye_id] eye)</b></font> - Draw an image.<br><br>
+<b>Sample usage:</b> Screen.drawImage(10,20,bitmap,TOP_SCREEN)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Screen.drawPartialImage(int x,int y,int image_x,int image_y,int width,int height,Image_id image,Image_id screen_id, [Eye_id] eye)</b></font> - Draw a part of an image.<br><br>
+<b>Sample usage:</b> Screen.drawPartialImage(10,20,0,0,100,100,bitmap,BOTTOM_SCREEN)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Screen.getImageWidth(Image_id image)</b></font> - Get width of an image.<br><br>
+<b>Sample usage:</b> width = Screen.getImageWidth(bitmap_file)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Screen.getImageHeight(Image_id image)</b></font> - Get height of an image.<br><br>
+<b>Sample usage:</b> height = Screen.getImageHeight(bitmap_file)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Screen.flipImage(Image_id source,Image_id destination)</b></font> - Flip an image.<br><br>
+<b>Sample usage:</b> Screen.flipImage(image,flipped_image)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>Image_id Screen.createImage(int width, int height, u32 color)</b></font> - Create an empty image.<br><br>
+<b>Sample usage:</b> image = Screen.createImage(10,10, Color.new(255,255,255))
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Screen.freeImage(Image_id image)</b></font> - Delete an image from memory.<br><br>
+<b>Sample usage:</b> Screen.freeImage(image)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Screen.saveImage(Image_id image,string file,bool jpg_compression)</b></font> - Save an image as BMP/JPG file.<br><br>
+<b>Sample usage:</b> Screen.saveImage(image,"/file.bmp",false)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Screen.enable3D(void)</b></font> - Enable stereoscopic 3D.<br><br>
+<b>Sample usage:</b> Screen.enable3D()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Screen.disable3D(void)</b></font> - Disable stereoscopic 3D.<br><br>
+<b>Sample usage:</b> Screen.disable3D()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>float Screen.get3DLevel(void)</b></font> - Get current stereoscopic 3D slide level.<br><br>
+<b>Sample usage:</b> lvl_3d = Screen.get3DLevel()
+</td></tr>
+</table>
+
+<br><br>
+<table border=1>
+<tr bgcolor="#FFFF99"><td><center><font size=4><b>Graphics Module</b></font></center></td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Graphics.init(void)</b></font> - Init GPU.<br><br>
+<b>Sample usage:</b> Graphics.init()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Graphics.term(void)</b></font> - Term GPU.<br><br>
+<b>Sample usage:</b> Graphics.term()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Graphics.initBlend(int screen, [int side])</b></font> - Init GPU blending.<br><br>
+<b>Sample usage:</b> Graphics.initBlend(TOP_SCREEN)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Graphics.termBlend(void)</b></font> - Term GPU blending.<br><br>
+<b>Sample usage:</b> Graphics.termBlend()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u32 Graphics.loadImage(string filename)</b></font> - Load an image as GPU texture.<br><br>
+<b>Sample usage:</b> texture = Graphics.loadImage("/file.png")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Graphics.freeImage(u32 texture)</b></font> - Free a GPU texture.<br><br>
+<b>Sample usage:</b> Graphics.freeImage(texture)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Graphics.flip()</b></font> - Swap GPU screens.<br><br>
+<b>Sample usage:</b> Graphics.flip()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Graphics.drawImage(float x, float y, int texture, [u32 color])</b></font> - Blit a GPU texture.<br><br>
+<b>Sample usage:</b> Graphics.drawImage(5, 5, texture)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Graphics.drawPartialImage(float x, float y, int img_x, int img_y, float width, float height, int texture, [u32 color])</b></font> - Blit a part of a GPU texture.<br><br>
+<b>Sample usage:</b> Graphics.drawPartialImage(5, 5, 0, 10, 100, 100, texture)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Graphics.drawRotateImage(float x, float y, int texture, float radius, [u32 color])</b></font> - Blit a rotated GPU texture.<br><br>
+<b>Sample usage:</b> Graphics.drawRotateImage(5, 5, texture, 0.5)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Graphics.drawScaleImage(float x, float y, int texture, float scale_x, float scale_y, [u32 color])</b></font> - Blit a scaled GPU texture.<br><br>
+<b>Sample usage:</b> Graphics.drawScaleImage(5, 5, texture, 0.5, 0.6)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Graphics.drawImageExtended(float x, float y, int img_x, int img_y, float width, float height, float radius, float scale_x, float scale_y, int texture, [u32 color])</b></font> - Blit a GPU texture with custom settings.<br><br>
+<b>Sample usage:</b> Graphics.drawImageExtended(5, 10, 0, 0, 100, 150, 0.8, 0.9, 0.97, texture)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Graphics.fillRect(float x1, float x2, float y1, float y2, u32 color)</b></font> - Blit a rectangle using GPU.<br><br>
+<b>Sample usage:</b> Graphics.fillRect(0,10,0,10,Color.new(255,255,255))
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Graphics.fillEmptyRect(float x1, float x2, float y1, float y2, u32 color)</b></font> - Blit an empty rectangle using GPU.<br><br>
+<b>Sample usage:</b> Graphics.fillEmptyRect(0,10,0,10,Color.new(255,255,255))
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Graphics.drawLine(float x1, float x2, float y1, float y2, u32 color)</b></font> - Blit a line using GPU.<br><br>
+<b>Sample usage:</b> Graphics.drawLine(0,10,0,10,Color.new(255,255,255))
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Graphics.drawCircle(float x1, float x2, int radius, u32 color)</b></font> - Blit a circle using GPU.<br><br>
+<b>Sample usage:</b> Graphics.drawCircle(0,10,1,Color.new(255,255,255))
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Graphics.getImageWidth(int texture)</b></font> - Returns width of a loaded GPU texture.<br><br>
+<b>Sample usage:</b> width = Graphics.getImageWidth(texture)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Graphics.getImageHeight(int texture)</b></font> - Returns height of a loaded GPU texture.<br><br>
+<b>Sample usage:</b> width = Graphics.getImageHeight(texture)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Graphics.convertFrom(int image)</b></font> - Convert a CPU image to a GPU texture.<br><br>
+<b>Sample usage:</b> gpu_text = Graphics.convertFrom(my_img)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u32 Graphics.getPixel(int x, int y, int texture)</b></font> - Get the color of a pixel.<br><br>
+<b>Sample usage:</b> Graphics.getPixel(5, 5, my_img)
+</td></tr>
+</table>
+
+<br><br>
+<table border=1>
+<tr bgcolor="#FFFF99"><td><center><font size=4><b>Console Module</b></font></center></td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u32 Console.new(Image_id screen)</b></font> - Create a new console.<br><br>
+<b>Sample usage:</b> console = Console.new(TOP_SCREEN)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Console.clear(u32 console)</b></font> - Clear a console.<br><br>
+<b>Sample usage:</b> Console.clear(console)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Console.show(u32 console)</b></font> - Print content of a console.<br><br>
+<b>Sample usage:</b> real_wrote_characters = Console.show(console)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Console.append(u32 console,string text)</b></font> - Append a text to a console.<br><br>
+<b>Sample usage:</b> Console.append(console,"Hello world!\n")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Console.destroy(u32 console)</b></font> - Free a console.<br><br>
+<b>Sample usage:</b> Console.destroy(console)
+</td></tr>
+</table>
+
+<br><br>
+<table border=1>
+<tr bgcolor="#FFFF99"><td><center><font size=4><b>Font Module</b></font></center></td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u32 Font.load(string filename)</b></font> - Load a TTF font.<br><br>
+<b>Sample usage:</b> my_font = Font.load("/font.ttf")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Font.setPixelSizes(u32 font,u32 size)</b></font> - Set size for a font.<br><br>
+<b>Sample usage:</b> Font.setPixelSizes(my_font,18)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Font.print(u32 font, int x, int y, string text, u32 color, u32 screen, [u32 side]) </b></font> - Print a text with a font.<br><br>
+<b>Sample usage:</b> Font.print(my_font, 5, 5, "Hello World!", Color.new(255,255,255), TOP_SCREEN)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Font.unload(u32 font)</b></font> - Free a font.<br><br>
+<b>Sample usage:</b> Font.unload(my_font)
+</td></tr>
+</table>
+
+<br><br>
+<table border=1>
+<tr bgcolor="#FFFF99"><td><center><font size=4><b>Color Module</b></font></center></td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u32 Color.new(int r, int g, int b,[int a])</b></font> - Create a new RGB or RGBA color.<br><br>
+<b>Sample usage:</b> red = Color.new(255,0,0)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Color.getR(u32 color)</b></font> - Get R value of a color.<br><br>
+<b>Sample usage:</b> red_value = Color.getR(Color.new(255,0,0))
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Color.getG(u32 color)</b></font> - Get G value of a color.<br><br>
+<b>Sample usage:</b> green_value = Color.getG(Color.new(255,0,0))
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Color.getB(u32 color)</b></font> - Get B value of a color.<br><br>
+<b>Sample usage:</b> blue_value = Color.getB(Color.new(255,0,0))
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Color.getA(u32 color)</b></font> - Get A value of a color.<br><br>
+<b>Sample usage:</b> alpha_value = Color.getA(Color.new(255,0,0))
+</td></tr>
+</table>
+
+<br><br>
+<table border=1>
+<tr bgcolor="#FFFF99"><td><center><font size=4><b>Controls Module</b></font></center></td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u32 Controls.read(void)</b></font> - Read controls input.<br><br>
+<b>Sample usage:</b> pad = Controls.read()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>bool Controls.check(u32 controls,u32 button)</b></font> - Check if a button is pressed.<br><br>
+<b>Sample usage:</b> if (Controls.check(Controls.read(),KEY_A)) then ... end
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int,int Controls.readCirclePad(void)</b></font> - Get X,Y position of Circle Pad.<br><br>
+<b>Sample usage:</b> x,y = Controls.readCirclePad()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int,int Controls.readCstickPad(void)</b></font> - Get X,Y position of Circle Pad Pro.<br><br>
+<b>Sample usage:</b> x,y = Controls.readCstickPad()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int,int Controls.readTouch(void)</b></font> - Get X,Y position of touchscreen pixel.<br><br>
+<b>Sample usage:</b> x,y = Controls.readTouch()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Controls.getVolume(void)</b></font> - Get current console volume.<br><br>
+<b>Sample usage:</b> vol = Controls.getVolume()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>bool Controls.headsetStatus(void)</b></font> - Check if headset is inserted.<br><br>
+<b>Sample usage:</b> if Controls.headsetStatus() then ... end
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>bool Controls.shellStatus(void)</b></font> - Check if shell is opened.<br><br>
+<b>Sample usage:</b> if Controls.shellStatus() then ... end
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Controls.enableScreen(screen_id screen)</b></font> - Power on a screen.<br><br>
+<b>Sample usage:</b> Controls.enableScreen(TOP_SCREEN)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Controls.disableScreen(screen_id screen)</b></font> - Power off a screen.<br><br>
+<b>Sample usage:</b> Controls.disableScreen(TOP_SCREEN)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Controls.enableGyro(void)</b></font> - Enable Gyroscope.<br><br>
+<b>Sample usage:</b> Controls.enableGyro()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Controls.disableGyro(void)</b></font> - Disable Gyroscope.<br><br>
+<b>Sample usage:</b> Controls.disableGyro()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Controls.enableAccel(void)</b></font> - Enable Accelerometer.<br><br>
+<b>Sample usage:</b> Controls.enableAccel()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Controls.disableAccel(void)</b></font> - Disable Accelerometer.<br><br>
+<b>Sample usage:</b> Controls.disableAccel()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int,int,int Controls.readGyro(void)</b></font> - Reads Gyroscope status.<br><br>
+<b>Sample usage:</b> x,y,z = Controls.readGyro()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int,int,int Controls.readAccel(void)</b></font> - Reads Accelerometer status.<br><br>
+<b>Sample usage:</b> x,y,z = Controls.readAccel()
+</td></tr>
+</table>
+
+<br><br>
+<table border=1>
+<tr bgcolor="#FFFF99"><td><center><font size=4><b>Timer Module</b></font></center></td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u32 Timer.new(void)</b></font> - Create a new timer.<br><br>
+<b>Sample usage:</b> timer = Timer.new()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u32 Timer.getTime(u32 timer)</b></font> - Returns time in milliseconds of timer object.<br><br>
+<b>Sample usage:</b> time = Timer.getTime(timer)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Timer.destroy(u32 timer)</b></font> - Free a timer object.<br><br>
+<b>Sample usage:</b> Timer.destroy(timer)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Timer.reset(u32 timer)</b></font> - Reset time of a timer object.<br><br>
+<b>Sample usage:</b> Timer.reset(timer)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Timer.pause(u32 timer)</b></font> - Pause a timer object.<br><br>
+<b>Sample usage:</b> Timer.pause(timer)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Timer.resume(u32 timer)</b></font> - Resume a timer object.<br><br>
+<b>Sample usage:</b> Timer.resume(timer)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>bool Timer.isPlaying(u32 timer)</b></font> - Check if a timer is paused or not.<br><br>
+<b>Sample usage:</b> if Timer.isPlaying(timer) then .. end
+</td></tr>
+</table>
+
+<br><br>
+<table border=1>
+<tr bgcolor="#FFFF99"><td><center><font size=4><b>Network Module</b></font></center></td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>bool Network.isWifiEnabled(void)</b></font> - Check if WiFi is enabled.<br><br>
+<b>Sample usage:</b> if (Network.isWifiEnabled()) then ... end
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>string Network.getMacAddress(void)</b></font> - Get console MAC address.<br><br>
+<b>Sample usage:</b> mac = Network.getMacAddress()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>string Network.getIPAddress(void)</b></font> - Get LAN IP address.<br><br>
+<b>Sample usage:</b> mac = Network.getIPAddress()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>string Network.updateFTP(void)</b></font> - Sets up an FTP server and get last received command.<br><br>
+<b>Sample usage:</b> cmd = Network.updateFTP()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Network.downloadFile(string url,string filename)</b></font> - Download a file via HTTP protocool.<br><br>
+<b>Sample usage:</b> Network.downloadFile("http://rinnegatamante.netsons.org/3DSBriscola.rar","/3DSBriscola.rar")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>string Network.requestString(string url)</b></font> - Request a string via HTTP protocool.<br><br>
+<b>Sample usage:</b> string = Network.requestString("http://rinnegatamante.netsons.org/ORGANIZ3D.txt")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>bool Network.sendMail(string to,string subject,string body)</b></font> - Send a mail via HTTP protocool.<br><br>
+<b>Sample usage:</b> is_mail_sent = Network.sendMail("rinnegatamante@gmail.com","Sample e-mail","This is a sample e-mail.")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Network.getWifiLevel(void)</b></font> - Return power level of your WiFi connection (1 to 3).<br><br>
+<b>Sample usage:</b> lv = Network.getWifiLevel()
+</td></tr>
+</table>
+
+<br><br>
+<table border=1>
+<tr bgcolor="#FFFF99"><td><center><font size=4><b>Socket Module</b></font></center></td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Socket.init(void)</b></font> - Init socketing system.<br><br>
+<b>Sample usage:</b> Socket.init()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Socket.term(void)</b></font> - Term socketing system.<br><br>
+<b>Sample usage:</b> Socket.term()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Socket.createServerSocket(int port)</b></font> - Create a server socket.<br><br>
+<b>Sample usage:</b> server_id = Socket.createServerSocket(5000)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Socket.connect(string host, int port)</b></font> - Create a client socket and connect it to the host.<br><br>
+<b>Sample usage:</b> client_id = Socket.connect("192.168.1.71", 5000)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Socket.send(int sock_id, string text)</b></font> - Send a message.<br><br>
+<b>Sample usage:</b> Socket.send(client_id, "Hello Network World!")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>string Socket.receive(int sock_id, int size)</b></font> - Receive a message.<br><br>
+<b>Sample usage:</b> msg = Socket.receive(client_id, 256)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Socket.accept(int sock_id)</b></font> - Search for connections (Server sockets).<br><br>
+<b>Sample usage:</b> client_id = Socket.accept(server_id)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Socket.close(int sock_id)</b></font> - Close a socket.<br><br>
+<b>Sample usage:</b> Socket.close(client_id)
+</td></tr>
+</table>
+
+<br><br>
+<table border=1>
+<tr bgcolor="#FFFF99"><td><center><font size=4><b>Mic Module</b></font></center></td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Mic.start(int seconds, int samplerate)</b></font> - Start recording with microphone.<br><br>
+<b>Sample usage:</b> Mic.start(10, 32730)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>wav_id Mic.stop(void)</b></font> - Stop recording and gets recorded sound.<br><br>
+<b>Sample usage:</b> sound = Mic.stop()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>bool Mic.isRecording(void)</b></font> - Check if microphone is still recording.<br><br>
+<b>Sample usage:</b> if Mic.isRecording() then ... end
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Mic.pause(void)</b></font> - Pause microphone.<br><br>
+<b>Sample usage:</b> Mic.pause()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Mic.resume(void)</b></font> - Resume microphone.<br><br>
+<b>Sample usage:</b> Mic.resume()
+</td></tr>
+</table>
+
+<br><br>
+<table border=1>
+<tr bgcolor="#FFFF99"><td><center><font size=4><b>Camera Module</b></font></center></td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Camera.init(screen_id screen,cam_id camera,[bool is3D])</b></font> - Initialize camera.<br><br>
+<b>Sample usage:</b> Camera.init(TOP_SCREEN, OUTER_CAM, false)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Camera.getOutput(void)</b></font> - Print camera output on screen.<br><br>
+<b>Sample usage:</b> Camera.getOutput()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Camera.takePhoto(string filename,res_value resolution,[bool jpg_compression])</b></font> - Take a photo with the camera.<br><br>
+<b>Sample usage:</b> Camera.takePhoto("/file.jpg", VGA_RES, true)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u32 Camera.takeImage()</b></font> - Take an image with the camera.<br><br>
+<b>Sample usage:</b> my_img = Camera.takeImage()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Camera.term()</b></font> - Terminate camera.<br><br>
+<b>Sample usage:</b> Camera.term()
+</td></tr>
+</table>
+
+<br><br>
+<table border=1>
+<tr bgcolor="#FFFF99"><td><center><font size=4><b>Sound Module</b></font></center></td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Sound.init(void)</b></font> - Initialize sound system.<br><br>
+<b>Sample usage:</b> Sound.init()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Sound.term(void)</b></font> - Terminate sound system.<br><br>
+<b>Sample usage:</b> Sound.term()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>wav_id Sound.openWav(string filename,[bool use_streaming])</b></font> - Open a WAV file.<br><br>
+<b>Sample usage:</b> wav = Sound.openWav("/file.wav",false)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>wav_id Sound.openAiff(string filename,[bool use_streaming])</b></font> - Open an AIFF/AIF file.<br><br>
+<b>Sample usage:</b> aiff = Sound.openAiff("/file.aiff",true)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>wav_id Sound.openOgg(string filename,[bool use_streaming])</b></font> - Open an OGG file.<br><br>
+<b>Sample usage:</b> wav = Sound.openOgg("/file.ogg",true)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Sound.updateStream()</b></font> - Update buffer for a sound stream.<br><br>
+<b>Sample usage:</b> Sound.updateStream()
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>bool Sound.isPlaying(wav_id wav_file)</b></font> - Get sound playing state.<br><br>
+<b>Sample usage:</b> if Sound.isPlaying(wav) then ... end
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Sound.play(wav_id wav_file, int loop)</b></font> - Play a loaded sound.<br><br>
+<b>Sample usage:</b> Sound.play(wav,NO_LOOP)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Sound.close(wav_id wav_file)</b></font> - Close and free a loaded sound.<br><br>
+<b>Sample usage:</b> Sound.close(wav)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Sound.pause(wav_id wav_file)</b></font> - Pause a sound.<br><br>
+<b>Sample usage:</b> Sound.pause(wav)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Sound.resume(wav_id wav_file)</b></font> - Resume a sound.<br><br>
+<b>Sample usage:</b> Sound.resume(wav)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void Sound.saveWav(wav_id wav_file,string filename)</b></font> - Save a sound as WAV file.<br><br>
+<b>Sample usage:</b> Sound.saveWav(sound,"/test.wav")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Sound.getTotalTime(wav_id wav_file)</b></font> - Get Total Time of a sound.<br><br>
+<b>Sample usage:</b>time = Sound.getTotalTime(wav_file)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Sound.getTime(wav_id wav_file)</b></font> - Get Current Time of a sound.<br><br>
+<b>Sample usage:</b>time = Sound.getTime(wav_file)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Sound.getSrate(wav_id wav_file)</b></font> - Get samplerate of a sound.<br><br>
+<b>Sample usage:</b>samplerate = Sound.getSrate(wav_file)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>string Sound.getTitle(wav_id wav_file)</b></font> - Get Title of a sound.<br><br>
+<b>Sample usage:</b>title = Sound.getTitle(wav_file)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>string Sound.getAuthor(wav_id wav_file)</b></font> - Get Author of a sound.<br><br>
+<b>Sample usage:</b>author = Sound.getAuthor(wav_file)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>int Sound.getType(wav_id wav_file)</b></font> - Get audiotype of a sound. (1 = Mono, 2 = Stereo)<br><br>
+<b>Sample usage:</b>atype = Sound.getType(wav_file)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>string Sound.getService(void)</b></font> - Returns used audio service.<br><br>
+<b>Sample usage:</b>srv = Sound.getService()
+</td></tr>
+</table>
+
+<br><br>
+<table border=1>
+<tr bgcolor="#FFFF99"><td><center><font size=4><b>Video Module</b></font></center></td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>jpgv_id JPGV.load(string filename)</b></font> - Load a JPGV file.<br><br>
+<b>Sample usage:</b> jpgv = JPGV.load("/file.jpgv")
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void JPGV.start(jpgv_id jpgv, int loop)</b></font> - Start a JPGV video.<br><br>
+<b>Sample usage:</b> JPGV.start(jpgv, NO_LOOP)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void JPGV.draw(int x, int y, jpgv_id jpgv, int screen, [bool use3D])</b></font> - Draw JPGV current frame.<br><br>
+<b>Sample usage:</b> JPGV.draw(0,0,jpgv,TOP_SCREEN)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void JPGV.drawFast(jpgv_id jpgv, int screen, [bool use3D])</b></font> - Draw fullscreen JPGV current frame in fast mode.<br><br>
+<b>Sample usage:</b> JPGV.drawFast(jpgv,TOP_SCREEN)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void JPGV.unload(jpgv_id jpgv)</b></font> - Unload a JPGV file.<br><br>
+<b>Sample usage:</b> JPGV.unload(jpgv)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u32 JPGV.getFPS(jpgv_id jpgv)</b></font> - Get JPGV framerate.<br><br>
+<b>Sample usage:</b> fps = JPGV.getFPS(jpgv)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u32 JPGV.getFrame(jpgv_id jpgv)</b></font> - Get JPGV current frame number.<br><br>
+<b>Sample usage:</b> cur = JPGV.getFrame(jpgv)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void JPGV.showFrame(int x,int y,jpgv_id jpgv,int frame_number,int screen,[Eye_Id] eye)</b></font> - Show a selected frame from JPGV file.<br><br>
+<b>Sample usage:</b> JPGV.showFrame(0,0,jpgv,50,TOP_SCREEN)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u32 JPGV.getSrate(jpgv_id jpgv)</b></font> - Get JPGV audio samplerate.<br><br>
+<b>Sample usage:</b> samplerate = JPGV.getSrate(jpgv)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>u32 JPGV.getSize(jpgv_id jpgv)</b></font> - Get JPGV total frame number.<br><br>
+<b>Sample usage:</b> tot = JPGV.getSize(jpgv)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>bool JPGV.isPlaying(jpgv_id jpgv)</b></font> - Get JPGV playback state.<br><br>
+<b>Sample usage:</b> if (JPGV.isPlaying(jpgv)) then ... end
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void JPGV.stop(jpgv_id jpgv)</b></font> - Stop a JPGV video.<br><br>
+<b>Sample usage:</b> JPGV.stop(jpgv)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void JPGV.pause(jpgv_id jpgv)</b></font> - Pause a JPGV video.<br><br>
+<b>Sample usage:</b> JPGV.pause(jpgv)
+</td></tr>
+<tr bgcolor="#CCFFFF"><td>
+<font color=red><b>void JPGV.resume(jpgv_id jpgv)</b></font> - Resume a JPGV video.<br><br>
+<b>Sample usage:</b> JPGV.resume(jpgv)
+</td></tr>
+</table>
+</center>
